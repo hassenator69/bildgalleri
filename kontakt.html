@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasse hemsida 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <section class="sub-header">
+        <a href="index.html"><img src="images/loggaV4.png" alt=""></a>
+        <div class="nav-lankar">
+            <ul>
+                <li><a href="./index.html">HEM</a></li>
+                <li><a href="./galleri.html">GALLERI</a></li>
+                <li><a href="./toppTre.html">TOPP TRE</a></li>
+                <li><a href="./kontakt.html">KONTAKT</a></li>
+            </ul>
+        </div>
+        </section>  
+    </nav>
+        <h1>Kontakt</h1>
+        <p>Var vänlig fyll i formuläret nedan för att ta kontakt med mig</p>
+
+    <form id="form">
+        <div>
+          <label for="name">Namn:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Meddelande:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Skicka</button>
+      </form>
+<script>
+  $(document).ready(function() {
+    $('#myForm').submit(function(event) {
+      var name = $('#name').val();
+      var email = $('#email').val();
+      var message = $('#message').val();
+      if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+</body>
+</html>

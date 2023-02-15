@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasse hemsida 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+            <section class="sub-header">
+            <a href="index.html"><img src="images/loggaV4.png" alt=""></a>
+            <div class="nav-lankar">
+                <ul>
+                    <li><a href="./index.html">HEM</a></li>
+                    <li><a href="./galleri.html">GALLERI</a></li>
+                    <li><a href="./toppTre.html">TOPP TRE</a></li>
+                    <li><a href="./kontakt.html">KONTAKT</a></li>
+                </ul>
+            </div>
+        </section>    
+    </nav>
+    
+    <video  width="500" src="images/toppTre.mp4" controls></video>
+
+      <button id="button1">1</button>
+      <button id="button2">2</button>
+      <button id="button3">3</button>
+
+       <div id="imageContainer">
+        <img id="visadBild" src="images/Tintin.jpeg" alt="toppTreBild">
+      </div>
+  
+      
+  
+      <script>
+        const imageContainer = document.getElementById("imageContainer");
+        const visadBild = document.getElementById("visadBild");
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+        const button3 = document.getElementById("button3");
+  
+        button1.addEventListener("click", function() {
+          visadBild.src = "images/Tintin.jpeg";
+        });
+  
+        button2.addEventListener("click", function() {
+          visadBild.src = "images/IMG_5048.jpeg";
+        });
+        button3.addEventListener("click", function(){
+            visadBild.src = "images/IMG_5049.jpeg";
+        });
+      </script>
+
+</body>
+</html>
